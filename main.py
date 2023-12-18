@@ -1,6 +1,6 @@
 import json
 
-import openai
+import OpenAI
 import streamlit as st
 from get_quiz import get_quiz_from_topic
 
@@ -27,7 +27,7 @@ def display_question():
     if len(st.session_state.questions) == 0:
         try:
             first_question = get_quiz_from_topic(topic, api_key)
-        except openai.error.AuthenticationError:
+        except OpenAI.error.AuthenticationError:
             st.error(
                 "Please enter a valid OpenAI API key in the left sidebar to proceed. "
                 "To know how to obtain the key checkout readme for this project here: https://github.com/Dibakarroy1997/QuizWhizAI/blob/main/README.md"
