@@ -1,6 +1,6 @@
 import json
 
-import OpenAI
+from langchain.llms import OpenAI
 import streamlit as st
 from get_quiz import get_quiz_from_topic
 
